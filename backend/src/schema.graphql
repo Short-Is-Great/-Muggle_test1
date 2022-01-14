@@ -1,0 +1,17 @@
+type Query {
+  all_links(url: String!): [Link!]
+  return_long_url(url: String!): [Link!]
+}
+
+type Mutation {
+  createLink(origin: String! , short: String!): Link!
+  deleteLink(url: String!): ID!
+}
+
+type Link {
+  id: ID
+  origin: String!
+  short: String!
+  
+}
+
